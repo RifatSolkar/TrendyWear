@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart - TrendyWear</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Cart overlay container */
+    .cart-overlay {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      position: relative;
+    }
+
+    /* Cart box content */
+    .cart-box {
+      max-width: 400px;
+      margin: 150px auto 0;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Close button (X icon) */
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Title */
+    .cart-box h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    /* Continue Shopping button */
+    .shop-btn {
+      background-color: #111;
+      color: #fff;
+      border: none;
+      padding: 15px 40px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 40px;
+      transition: background-color 0.3s ease;
+    }
+
+    .shop-btn:hover {
+      background-color: #333;
+    }
+
+    /* Account text and login link */
+    .account-text {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .login-link {
+      color: #111;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    .login-link:hover {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cart-overlay">
+    <div class="cart-box">
+      <button class="close-btn"><i class="fas fa-times"></i></button>
+      <h2>Your cart is empty</h2>
+      <button class="shop-btn">Continue shopping</button>
+      <p class="account-text">Have an account?</p>
+      <p><a href="#" class="login-link">Log in</a> to check out faster.</p>
+    </div>
+  </div>
+
+</body>
+</html>

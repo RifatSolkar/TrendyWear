@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrendyWear | Products</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+    }
+
+    .navbar {
+      background: white;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .product-section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .product-section h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .product-info h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .product-info p {
+      font-size: 16px;
+      color: #E91E63;
+      margin: 0;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .badge {
+      position: absolute;
+      background: #000;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      top: 10px;
+      left: 10px;
+    }
+
+    .product-card .img-wrap {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+          <ul class="nav-left">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li class="dropdown">
+              <a href="#">Collections ▾</a>
+            </li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="#index.html">Contact</a></li>
+          </ul>
+    
+          <div class="logo"><span>TrendyWear</span></div>
+    
+          <ul class="nav-icons">
+            <li><i class="fas fa-search"></i></li>
+            <li><i class="fas fa-user" onclick="openModal('signinModal')"></i></li>
+            <li><i class="fas fa-shopping-bag"></i></li>
+          </ul>
+        </nav>
+      </header>
+    
+  <section class="product-section">
+    <h2>Our Products</h2>
+    <p>Latest ethnic fashion to elevate your style</p>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="img-wrap">
+          <img src="images/rozana.jpg" alt="Blissful Bandhani">
+          <div class="badge">Sale</div>
+        </div>
+        <div class="product-info">
+          <h4>Blissful Bandhani</h4>
+          <p><span class="old-price">₹4,750</span> ₹3,325</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/brides.jpg" alt="Bridal Elegance">
+        <div class="product-info">
+          <h4>Bridal Elegance</h4>
+          <p>₹28,000</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-wrap">
+          <img src="images/TopPicks6.jpg" alt="Cotton Blossom">
+          <div class="badge">Sale</div>
+        </div>
+        <div class="product-info">
+          <h4>Cotton Blossom</h4>
+          <p><span class="old-price">₹3,750</span> ₹2,625</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-wrap">
+          <img src="images/TopPicks3.jpg" alt="Elegant Charm">
+          <div class="badge">Sale</div>
+        </div>
+        <div class="product-info">
+          <h4>Elegant Charm</h4>
+          <p><span class="old-price">₹4,150</span> ₹3,605</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/newKuchKhaas.jpg" alt="Georgette Shimmer">
+        <div class="product-info">
+          <h4>Georgette Shimmer</h4>
+          <p>₹3,675</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-wrap">
+          <img src="images/tyohaaron.jpg" alt="Glimmering Anarkali">
+          <div class="badge">Sale</div>
+        </div>
+        <div class="product-info">
+          <h4>Glimmering Anarkali</h4>
+          <p><span class="old-price">₹3,950</span> ₹3,675</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-wrap">
+          <img src="images/TopPicks2.jpg" alt="Glimmering Anarkali">
+          <div class="badge">Sale</div>
+        </div>
+        <div class="product-info">
+          <h4>Glimmering Anarkali</h4>
+          <p><span class="old-price">₹3,950</span> ₹3,675</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="img-wrap">
+          <img src="images/TopPicks4.jpg" alt="Glimmering Anarkali">
+          <div class="badge">Sale</div>
+        </div>
+        <div class="product-info">
+          <h4>Glimmering Anarkali</h4>
+          <p><span class="old-price">₹3,950</span> ₹3,675</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

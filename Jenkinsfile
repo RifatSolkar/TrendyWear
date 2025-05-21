@@ -10,13 +10,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t trendywear-app .'
+                bat 'docker build -t trendywear-app .'
             }
         }
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8080:80 trendywear-app'
+                bat 'docker run -d -p 8080:80 trendywear-app'
             }
         }
     }
